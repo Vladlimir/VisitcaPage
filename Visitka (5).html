@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Основные SEO метатеги -->
+    <title>Ari Tbarra | Концепт-художник - Персонажи, Оружие, Иконки</title>
+    <meta name="description" content="Профессиональный концепт-арт для игровой индустрии. Персонажи, фэнтези-оружие, UI-иконки и предметы. 7+ лет опыта в 3D моделировании и цифровой графике.">
+    <meta name="keywords" content="концепт-арт, игровая графика, 3D моделирование, фэнтези персонажи, дизайн оружия, UI иконки, цифровое искусство">
+    <meta name="author" content="Ari Tbarra">
+
+	<title>Ari Tbarra | Портфолио</title>
+	<style>
+		:root {
+			--bg-dark: #1c1c1c;
+			--bg-medium: #2a2a2a;
+			--bg-light: #383838;
+			--text-primary: #e6e6e6;
+			--text-secondary: #b3b3b3;
+			--accent-color: #8a3b66;
+			--border-color: #4d4d4d;
+		}
+
+		*,
+		::before,
+		::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-family: Georgia, serif;
+		}
+
+		body {
+			background: var(--bg-dark);
+			color: var(--text-primary);
+			line-height: 1.6;
+			font-size: 0.9rem;
+		}
+
+		.header {
+			position: fixed;
+			inset: 0 0 auto 0;
+			height: 70px;
+			padding: 0.5rem 1rem;
+			background: var(--bg-dark);
+			border-bottom: 2px solid var(--border-color);
+			z-index: 100;
+		}
+
+		.nav {
+			display: flex;
+			gap: 1.5rem;
+			justify-content: center;
+		}
+
+		.nav a,
+		.social-links a {
+			color: var(--text-secondary);
+			text-decoration: none;
+			transition: color 0.3s;
+		}
+
+		.nav a {
+			font-size: 1.2rem;
+			padding: 0.3rem 0.8rem;
+		}
+
+		.nav a:hover,
+		.social-links a:hover {
+			color: var(--accent-color);
+		}
+
+		.section {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 4rem 1.5rem 2rem;
+			border-bottom: 1px solid var(--border-color);
+		}
+
+		h2 {
+			font-size: 1.8rem;
+			margin-bottom: 1.5rem;
+			padding-left: 0.8rem;
+			border-left: 3px solid var(--accent-color);
+			letter-spacing: 1px;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 1.5rem;
+			margin: 1.5rem 0;
+		}
+
+		.gallery img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			border: 2px solid var(--bg-medium);
+			transition: transform 0.3s;
+		}
+
+		.gallery img:hover {
+			transform: scale(1.03);
+		}
+
+		.about {
+			display: grid;
+			grid-template-columns: 200px 1fr;
+			gap: 2rem;
+			align-items: center;
+		}
+
+		.avatar {
+			width: 100%;
+			border-radius: 50%;
+			border: 2px solid var(--border-color);
+		}
+
+		.skills {
+			display: flex;
+			gap: 0.8rem;
+			margin: 1rem 0;
+		}
+
+		.skill {
+			background: var(--bg-medium);
+			padding: 0.4rem 0.8rem;
+			border-radius: 3px;
+			color: var(--text-secondary);
+			font-size: 0.9rem;
+		}
+
+		.contacts-section {
+			background: var(--bg-medium);
+			padding: 4rem 0;
+		}
+
+		.contacts-content {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 0 1.5rem;
+		}
+
+		.contact-form {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			margin: 1.5rem 0;
+		}
+
+		.contact-form label {
+			display: block;
+			color: var(--text-secondary);
+			font-size: 0.85rem;
+			margin-bottom: 0.3rem;
+		}
+
+		.contact-form input,
+		.contact-form textarea {
+			width: 100%;
+			padding: 10px;
+			background: var(--bg-light);
+			border: 1px solid var(--border-color);
+			color: var(--text-primary);
+			font-size: 0.9rem;
+			border-radius: 3px;
+			transition: border-color 0.3s;
+		}
+
+		.contact-form input:focus,
+		.contact-form textarea:focus {
+			outline: none;
+			border-color: #666;
+		}
+
+		.contact-form button {
+			background: var(--accent-color);
+			color: var(--text-primary);
+			padding: 10px 25px;
+			border: 0;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 0.9rem;
+			transition: background 0.3s;
+			align-self: flex-start;
+		}
+
+		.contact-form button:hover {
+			background: #7d3d60;
+		}
+
+		.email-link {
+			display: block;
+			color: var(--text-secondary);
+			text-decoration: none;
+			margin: 1.5rem 0;
+			text-align: center;
+			font-size: 1rem;
+			transition: color 0.3s;
+		}
+
+		.email-link:hover {
+			color: var(--accent-color);
+		}
+
+		.social-links {
+			display: flex;
+			justify-content: center;
+			gap: 1.5rem;
+			margin-top: 1.5rem;
+			font-size: 0.9rem;
+		}
+
+		@media (max-width: 480px) {
+			.gallery img {
+				height: 250px;
+			}
+
+			.about {
+				grid-template-columns: 1fr;
+				gap: 1.5rem;
+			}
+
+			.avatar {
+				width: 60%;
+				margin: 0 auto;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<nav class="nav">
+			<a href="#characters">Персонажи</a>
+			<a href="#icons">Иконки</a>
+			<a href="#weapons">Оружие</a>
+			<a href="#about">Обо мне</a>
+			<a href="#contacts">Контакты</a>
+		</nav>
+	</header>
+
+	<!-- Секция персонажей -->
+<!-- Секция персонажей -->
+<section class="section" id="characters">
+	<h2>Персонажи</h2>
+	<div class="gallery">
+		<img src="https://cdnb.artstation.com/p/assets/covers/images/064/568/937/smaller_square/denis-pechenkin-denis-pechenkin-coverrobots2.jpg?1688231909"
+             alt="Животноподобные люди в киберпанк-стиле"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdna.artstation.com/p/assets/images/images/064/458/244/20230628104940/smaller_square/denis-pechenkin-00043.jpg?1687967380"
+             alt="Джон Вик в стиле Disco Elysium"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdna.artstation.com/p/assets/images/images/056/473/150/smaller_square/denis-pechenkin-13.jpg?1669316148"
+             alt="Концепт-арт 'The King'"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdnb.artstation.com/p/assets/images/images/071/025/943/20240103055801/smaller_square/denis-pechenkin-12.jpg?1704283082"
+             alt="Готический вампир"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdna.artstation.com/p/assets/images/images/056/433/012/smaller_square/denis-pechenkin-10.jpg?1669224789"
+             alt="Концепт-арт зомби #1"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdna.artstation.com/p/assets/images/images/056/435/828/large/denis-pechenkin-14.jpg?1669229681"
+             alt="Концепт-арт зомби #2"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+    </div>
+</section>
+
+	<!-- Секция иконок -->
+<!-- Секция иконок -->
+<section class="section" id="icons">
+    <h2>Иконки и предметы</h2>
+    <div class="gallery">
+        <img src="https://cdnb.artstation.com/p/assets/images/images/058/123/103/large/denis-pechenkin-grid-0359.jpg?1673441232"
+             alt="Магические артефакты и камни"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+        <img src="https://cdnb.artstation.com/p/assets/images/images/058/121/761/large/denis-pechenkin-icongenerator.jpg?1673438683"
+             alt="Набор для выживания в фэнтези-мире"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+        <img src="https://cdna.artstation.com/p/assets/images/images/059/622/974/large/denis-pechenkin-13.jpg?1676805191"
+             alt="Древние магические гримуары"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+        <img src="https://cdna.artstation.com/p/assets/images/images/062/263/596/large/denis-pechenkin-ores.jpg?1682705435"
+             alt="Разноцветные фэнтезийные минералы"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+    </div>
+</section>
+
+	<!-- Секция оружия -->
+<!-- Секция оружия -->
+<section class="section" id="weapons">
+	<h2>Оружие</h2>
+	<div class="gallery">
+		<img src="https://cdna.artstation.com/p/assets/images/images/055/239/294/large/denis-pechenkin-3.jpg?1666461429"
+             alt="Меч Короля Обезьян 'Blood Reaper'"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdnb.artstation.com/p/assets/images/images/055/061/193/20221017130911/smaller_square/denis-pechenkin-3.jpg?1666030151"
+             alt="Концепт-арт фэнтезийных мечей"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdnb.artstation.com/p/assets/images/images/062/954/347/large/denis-pechenkin-00954-955938972.jpg?1684341300"
+             alt="Токсичный меч с ядовитым клинком"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+
+		<img src="https://cdna.artstation.com/p/assets/images/images/064/211/926/large/denis-pechenkin-01320-930565699.jpg?1687371658"
+             alt="Демонический энергетический лук"
+             loading="lazy"
+             width="300"
+             height="300"
+             style="aspect-ratio: 1/1">
+    </div>
+</section>
+
+	<!-- Секция "Обо мне" -->
+	<section class="section" id="about">
+		<div class="about">
+			<img src="https://id.vgoroden.ru/digesblwtap4b_178lde1/etogo-cheloveka-ne-sushhestvuet-kak-neyroseti-vvodyat-nas-v-zabluzhdenie-foto-7.jpeg" alt="Аватар" class="avatar">
+			<div>
+				<h2>Обо мне</h2>
+				<p>Концепт-художник с 7-летним опытом в разработке визуальных решений для игровой индустрии. Специализируюсь на создании
+				атмосферных персонажей, уникального оружия и стилизованных UI-элементов. Участвовала в разработке 12+ коммерческих
+				проектов, включая мобильные RPG и AAA-экшены.</p>
+				<div class="skills">
+					<span class="skill">Photoshop</span>
+					<span class="skill">Blender</span>
+					<span class="skill">3D Modeling</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contacts-section" id="contacts">
+		<div class="contacts-content">
+			<h2>Связаться со мной</h2>
+
+			<form class="contact-form" action="https://formspree.io/f/xzzraeyw" method="POST">
+				<label>
+	                    Ваше имя:
+	                    <input type="text" name="name" placeholder="Иван Иванов" required>
+	                </label>
+
+				<label>
+	                    Ваш email:
+	                    <input type="email" name="email" placeholder="ivan@example.com" required>
+	                </label>
+
+				<label>
+	                    Ваше сообщение:
+	                    <textarea name="message" placeholder="Напишите ваше сообщение здесь..." rows="4" required></textarea>
+	                </label>
+
+				<button type="submit">Отправить сообщение</button>
+			</form>
+
+			<a href="mailto:hello@aritbarra.com" class="email-link">hello@aritbarra.com</a>
+
+			<div class="social-links">
+				<a href="https://artstation.com" target="_blank">ArtStation</a>
+				<a href="https://instagram.com" target="_blank">Instagram</a>
+				<a href="https://twitter.com" target="_blank">Twitter</a>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
